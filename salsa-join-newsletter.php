@@ -1,7 +1,7 @@
 <?php
 /*
-Plugin Name: Salsa Join Newsletter Widget
-Description: Adds email to salsa
+Plugin Name: Salsa Can Opener
+Description: Adds email to salsa Newsletter via Widget
 Author: Justin Foell
 Version: 1.0
 */
@@ -58,6 +58,7 @@ class Salsa_Join {
 	public function onWidgetInit() {
 		register_widget("Salsa_Newsletter_Widget");
 
+		wp_enqueue_script( 'jquery' );
 		wp_register_script( 'salsa_join_newsletter', SALSA_JOIN_URL . 'salsa-join-newsletter.js' );
 		wp_enqueue_script( 'salsa_join_newsletter' );
 	}
