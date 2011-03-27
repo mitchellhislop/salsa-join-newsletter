@@ -1,0 +1,17 @@
+<?php
+/*
+Plugin Name: Salsa Join Newsletter Widget
+Description: Adds email to salsa
+Author: Justin Foell
+Version: 1.0
+*/
+
+class Salsa_Join {
+	
+	public function onPluginsLoaded() {
+	}
+}
+
+$salsa = new Salsa_Join();
+
+add_action('plugins_loaded', array($salsa, 'onPluginsLoaded'));

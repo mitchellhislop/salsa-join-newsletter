@@ -1,0 +1,24 @@
+var salsaJoinElements;
+
+(function($) {
+
+salsaJoinElements = {
+
+	init : function() {
+		var that = this;
+		this.attachListeners();
+	},
+
+	attachListeners : function() {
+		$('#salsa-send').click(function() {
+			$.get('http://equalityfederation.salsalabs.com/api/authenticate.sjs?email=ryan@project515.org&password=actabano',
+				function(data) {
+					alert(data);
+				});
+		});
+	}
+};
+
+$(document).ready(function($){ salsaJoinElements.init(); });
+
+})(jQuery);
